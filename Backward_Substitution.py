@@ -2,7 +2,7 @@ def backSubstitution(n,U,d):
     
     x = d/U.diagonal()
     
-    for i in range(n-1, -1,-1):
+    for i in range(n-1, 0,-1):
         
         Soma = 0
         
