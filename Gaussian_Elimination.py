@@ -9,4 +9,5 @@ def gaussElimination(A,b,n):
                 A[i][j] = A[i][j] + m * A[k][j]
             b[i] = b[i] + m * b[k] 
     
+    
     return back.backSubstitution(n, A, b)
