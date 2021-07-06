@@ -30,12 +30,6 @@ def gaussPivot(A,b,n):
                 
                 
             b[i] = b[i] + m * b[k]
-            
-        
-        
-        
-        
-            
-            
+                  
     return back.backSubstitution(n, A, b)
 
