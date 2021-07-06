@@ -48,5 +48,3 @@ def gaussLU(A,b,n):
 
 
 
-
-    return f.forwardSubstitution(n,A,b)
