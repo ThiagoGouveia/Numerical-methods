@@ -1,6 +1,6 @@
 import numpy as np
 def forwardSubstitution(n,L,c):
-    x = np.zeros((3,), dtype='f') #creat output array
+    x = np.zeros((n,), dtype='f') #creat output array
     x[0] = c[0]/L[0][0] #initialize array 
 
     j = 0
@@ -11,6 +11,6 @@ def forwardSubstitution(n,L,c):
         
         x[i] = (c[i] - soma) / L[i][j]
     
-    
+    return x
     
     
