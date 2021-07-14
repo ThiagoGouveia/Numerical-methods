@@ -1,6 +1,8 @@
 import Gaussian_Elimination as g
 import Gaussian_Pivot as gp
 import Gaussian_LU as LU
+import Jacobi 
+import Gauss_Seidel as GS
 import numpy as np
 
 n = 3  
@@ -13,7 +15,11 @@ b = np.array([11, -15, 29], dtype='f')
 #res = gp.gaussPivot(A,b,n)
 #print(res)
 
-
 res = LU.gaussLU(A,b,n)
 print(res)
+
+
+
+
+
 
