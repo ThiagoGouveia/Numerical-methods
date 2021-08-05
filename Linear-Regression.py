@@ -7,21 +7,25 @@ Created on Tue Aug  3 17:26:24 2021
 
 
 import numpy as np
+from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
 
-x = 2 * np.random.rand(50,1)
-y = x + np.random.rand(50,1)
 
-x_b = np.c_[np.ones((50, 1)), x]
-theta_best = np.linalg.inv(x_b.T.dot(x_b)).dot(x_b.T).dot(y)
+X = 2 * np.random.rand(50,1)
+y = X + np.random.rand(50,1)
 
-x_new = np.array([[0],[2],[4],[6]])
+X = np.c_[np.ones((50, 1)), X]
 
-x_new_b = np.c_[np.ones((4, 1)), x_new]
-y_predict = x_new_b.dot(theta_best)
+theta = np.linalg.inv(X.T.dot(X)).dot(X.T).dot(y)
 
-plt.plot(x_new, y_predict, "red")
-plt.plot(x, y, "b.")
+xNovo = 2 * np.random.rand(50,1)
+
+xNovo = np.c_[np.ones((50, 1)), xNovo]
+yNovo = xNovo.dot(theta)
+
+plt.plot(xNovo[:,1], yNovo, "red")
+plt.plot( X[:,1], y, "b.")
 plt.axis([0,2,0,3])
 plt.show()
 
+r2 = r2_score(y, yNovo)
